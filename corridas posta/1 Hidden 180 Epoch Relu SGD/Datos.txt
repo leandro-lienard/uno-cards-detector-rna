@@ -1,0 +1,25 @@
+Numero de cartas 48
+config = {
+    "imagenes_por_billete": 12,
+    "ancho_imagenes": 300,
+    "alto_imagenes": 300,
+    "ancho_imagenes_a_procesar": 64,
+    "alto_imagenes_a_procesar": 64,
+    "epochs": 180,
+    "tasa_aprendizaje": 0.001,
+}
+
+
+>Evaluación del Modelo: 
+    - Error:  0.35346534848213196
+    - Exactitud:  90.41666388511658
+	
+	
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_img (InputLayer)       [(None, 15000)]           0         
+_________________________________________________________________
+hidden_1 (Dense)             (None, 1875)              28126875  
+_________________________________________________________________
+output (Dense)               (None, 48)                90048     
+=================================================================

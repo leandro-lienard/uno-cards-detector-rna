@@ -1,0 +1,28 @@
+Numero de cartas 48
+config = {
+    "imagenes_por_carta": 50,
+    "ancho_imagenes": 100,
+    "alto_imagenes": 150,
+    "ancho_imagenes_a_procesar": 100,
+    "alto_imagenes_a_procesar": 150,
+    "epochs": 300,
+    "tasa_aprendizaje": 0.001,
+    "archivo_weights": "./src/imagenes/tmp"
+}
+
+
+>Evaluación del Modelo: 
+    - Error:  0.637906014919281
+    - Exactitud:  84.58333611488342
+	
+	
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_img (InputLayer)       [(None, 15000)]           0         
+_________________________________________________________________
+hidden_1 (Dense)             (None, 1875)              28126875  
+_________________________________________________________________
+hidden_2 (Dense)             (None, 937)               1757812   
+_________________________________________________________________
+output (Dense)               (None, 48)                45024     
+=================================================================

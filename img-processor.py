@@ -103,7 +103,7 @@ def prepare_imageList(imagList):
 ##  auxiAr = auxiAr.reshape((len(auxiAr), num_inputs))
   auxiAr = np.array(imagList)
   auxiAr = auxiAr.reshape((len(auxiAr), IMAGE_SHAPE[0], IMAGE_SHAPE[1], IMAGE_SHAPE[2]))
-  return auxiAr
+  #return auxiAr
 
   return np.array(auxiAr)
 
@@ -124,12 +124,12 @@ def prepare_clasesList(classesList, dictMapeo=None):
 
 # define vector auxiliar de datos de entrada para usar en el entrenamiento y prueba
 x_train = prepare_imageList(images_train)
-x_test = prepare_imageList(images_test)
+## x_test = prepare_imageList(images_test)
 
 # define vector auxiliar de datos de salida para usar en el entrenamiento y prueba
 # también usa esta información para determinar la cantida de neuronas de salida
 y_train, y_trainEnc, dictMapeo = prepare_clasesList(classes_train)
-y_test, y_testEnc,_ = prepare_clasesList(classes_test, dictMapeo)
+## y_test, y_testEnc,_ = prepare_clasesList(classes_test, dictMapeo)
 
 daLayers_modelo = []
 
@@ -141,9 +141,9 @@ print(" - x_train (cant ejemplos, datos entrada): ", x_train.shape)
 print(" - y_trainEnc (cant): ", len(y_trainEnc))
 print(" - y_train (cant): ", len(y_train))
 print("\n\n> Para Prueba: ")
-print(" - x_test (cant ejemplos, datos entrada): ", x_test.shape)
-print(" - y_testEnc (cant): ", len(y_testEnc))
-print(" - y_test (cant): ", len(y_test))
+# # print(" - x_test (cant ejemplos, datos entrada): ", x_test.shape)
+# print(" - y_testEnc (cant): ", len(y_testEnc))
+# print(" - y_test (cant): ", len(y_test))
 print("\n\n> Para Ambos: ")
 print(" - dictMapeo: ", dictMapeo)
 print(" - clases_map: ", clases_map)
